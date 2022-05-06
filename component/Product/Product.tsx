@@ -1,5 +1,6 @@
-import {ImageSourcePropType, StyleSheet, View} from 'react-native';
+import {FlatList, ImageSourcePropType, ListRenderItemInfo, StyleSheet} from 'react-native';
 import {ProductItem} from "./ProductItem/ProductItem";
+import * as React from "react";
 
 type ProductsType = {
     nike: ProductType[]
@@ -61,18 +62,19 @@ const products: ProductsType = {
 
 export const Product = () => {
     return (
-        <View style={styles.product}>
-            {products.nike.map((item) => {
-                return <ProductItem key={item.id}
-                                    id={item.id}
-                                    image={item.image}
-                                    rating={item.rating}
-                                    price={item.price}
-                                    name={item.name}
-                                    logo={item.logo}
-                />
-            })}
-        </View>
+        <FlatList data={products.nike}
+                  showsVerticalScrollIndicator={false}
+                  renderItem={(item: ListRenderItemInfo<ProductType>) => {
+                      return <ProductItem key={item.item.id}
+                                          logo={item.item.logo}
+                                          id={item.item.id}
+                                          image={item.item.image}
+                                          name={item.item.name}
+                                          price={item.item.price}
+                                          rating={item.item.rating}
+                      />
+                  }}
+        />
     );
 }
 
