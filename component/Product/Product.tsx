@@ -31,7 +31,7 @@ export const Product = () => {
                         />
                     </TouchableOpacity>
                 </View>
-                <View style={styles.title}>
+                <View >
                     <Text style={styles.titleProduct}>Nike Air Max Plus III</Text>
                     <View>
                         <View style={styles.rating}>
@@ -68,7 +68,6 @@ export const Product = () => {
                         </View>
                     </View>
                 </View>
-
             </View>
         </>
     );
@@ -76,10 +75,9 @@ export const Product = () => {
 
 const styles = StyleSheet.create({
     product: {
-        width: 340,
-        height: 340,
         backgroundColor: '#fff',
-        padding: 15
+        padding: 15,
+        marginTop:20
     },
     logoProduct: {
         display: 'flex',
@@ -93,16 +91,13 @@ const styles = StyleSheet.create({
     image: {
         width: 280,
         height: 280,
-        transform: [{rotateY: '180deg'}, {translateY: -50}]
+        transform: [{rotateY: '180deg'}, {translateX: -30}]
     },
     titleProduct: {
         fontSize: 15,
         fontWeight: '600',
         color: '#8A8A9D',
         textAlign: 'left'
-    },
-    title: {
-        transform: [{translateY: -60}]
     },
     rating: {
         display: 'flex',
@@ -112,11 +107,11 @@ const styles = StyleSheet.create({
         fontSize: 23,
         fontWeight: '700',
         color: '#313B5D',
-        transform: [{translateX: 130}, {translateY: -10}]
+        transform: [{translateX: 160}]
     },
     wallet: {
         color: '#3A63E0',
         fontSize: 18,
-        fontWeight: '700'
+        fontWeight: '700',
     }
 });

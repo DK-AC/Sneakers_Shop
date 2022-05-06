@@ -18,6 +18,9 @@ export default function App() {
             </View>
             <View style={styles.product}>
                 <Product/>
+                <Product/>
+                <Product/>
+                <Product/>
             </View>
             <StatusBar style="auto"/>
         </ScrollView>
@@ -42,7 +45,7 @@ const styles = StyleSheet.create({
         paddingTop: 30
     },
     product: {
-        paddingTop: 30
+        paddingTop: 10
     }
 
 });
