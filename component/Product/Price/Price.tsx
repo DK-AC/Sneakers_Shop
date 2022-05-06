@@ -9,7 +9,6 @@ export const Price = () => {
                 189
             </Text>
         </>
-
     );
 };
 
