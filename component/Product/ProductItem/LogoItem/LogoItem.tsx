@@ -1,15 +1,19 @@
 import React from 'react';
-import {Image, StyleSheet, TouchableOpacity, View} from "react-native";
+import {Image, ImageSourcePropType, StyleSheet, TouchableOpacity, View} from "react-native";
 import {Ionicons} from "@expo/vector-icons";
 
-export const LogoItem = () => {
+type PropsType = {
+    logo: ImageSourcePropType
+}
+
+export const LogoItem: React.FC<PropsType> = ({logo}) => {
     return (
         <>
             <View style={styles.logoProduct}>
                 <TouchableOpacity onPress={() => console.log('adidas')} activeOpacity={0.7}>
                     <Image
                         style={styles.logo}
-                        source={require('./../../../../assets/nikeProduct.png')}
+                        source={logo}
                     />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => {

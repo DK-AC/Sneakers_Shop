@@ -13,28 +13,40 @@ type PropsType = {
     id: number
     price: number
     name: string
+    logo:ImageSourcePropType
 
 }
 
 export const ProductItem: React.FC<PropsType> = (props) => {
 
-    const {image, rating, id, price, name} = props
+    const {image, rating, id, price, name,logo} = props
 
     return (
         <>
             <View style={styles.product}>
-                <LogoItem/>
+                <LogoItem logo={logo}/>
                 <MainImage image={image}/>
                 <View>
                     <TitleItem title={name}/>
-                    <View style={styles.rating}>
-                        <RatingItem color={'#FFC833'}/>
-                        <RatingItem color={'#FFC833'}/>
-                        <RatingItem color={'#FFC833'}/>
-                        <RatingItem color={'#FFC833'}/>
-                        <RatingItem color={'#EBF0FF'}/>
-                        <Price price={price}/>
-                    </View>
+                    {rating === 4
+                        ? <View style={styles.rating}>
+                            <RatingItem color={'#FFC833'}/>
+                            <RatingItem color={'#FFC833'}/>
+                            <RatingItem color={'#FFC833'}/>
+                            <RatingItem color={'#FFC833'}/>
+                            <RatingItem color={'#EBF0FF'}/>
+                            <Price price={price}/>
+
+                        </View>
+                        : <View style={styles.rating}>
+                            <RatingItem color={'#EBF0FF'}/>
+                            <RatingItem color={'#EBF0FF'}/>
+                            <RatingItem color={'#EBF0FF'}/>
+                            <RatingItem color={'#EBF0FF'}/>
+                            <RatingItem color={'#EBF0FF'}/>
+                            <Price price={price}/>
+                        </View>
+                    }
                 </View>
             </View>
         </>
