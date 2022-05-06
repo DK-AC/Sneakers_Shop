@@ -7,7 +7,7 @@ type PropsType = {
 
 export const BrandItem: React.FC<PropsType> = ({logo}) => {
     return (
-        <TouchableOpacity onPress={() => {
+        <TouchableOpacity style={styles.item} onPress={() => {
             console.log('reebok')
         }} activeOpacity={0.7}>
             <Image
@@ -23,9 +23,12 @@ const styles = StyleSheet.create({
     image: {
         width: 55,
         height: 30,
-        opacity: 0.4
+        opacity: 0.4,
     },
     activeImage: {
         opacity: 1
+    },
+    item: {
+        paddingRight: 20,
     }
 });

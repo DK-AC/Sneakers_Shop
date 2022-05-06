@@ -1,4 +1,4 @@
-import {FlatList, ImageSourcePropType, ListRenderItemInfo} from "react-native";
+import {FlatList, ImageSourcePropType, ListRenderItemInfo, StyleSheet} from "react-native";
 import * as React from "react";
 import {BrandItem} from "./BrandItem/BrandItem";
 
@@ -65,4 +65,6 @@ export const Brand = () => {
         />
     );
 };
+
+
 
