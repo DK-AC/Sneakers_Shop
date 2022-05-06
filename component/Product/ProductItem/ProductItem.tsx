@@ -9,9 +9,16 @@ import {MainImage} from "./MainImage/MainImage";
 
 type PropsType = {
     image: ImageSourcePropType
+    rating: number
+    id: number
+    price: number
+    name: string
+
 }
 
-export const ProductItem: React.FC<PropsType> = ({image}) => {
+export const ProductItem: React.FC<PropsType> = (props) => {
+
+    const {image, rating, id, price, name} = props
 
     return (
         <>
@@ -19,14 +26,14 @@ export const ProductItem: React.FC<PropsType> = ({image}) => {
                 <LogoItem/>
                 <MainImage image={image}/>
                 <View>
-                    <TitleItem/>
+                    <TitleItem title={name}/>
                     <View style={styles.rating}>
                         <RatingItem color={'#FFC833'}/>
                         <RatingItem color={'#FFC833'}/>
                         <RatingItem color={'#FFC833'}/>
                         <RatingItem color={'#FFC833'}/>
                         <RatingItem color={'#EBF0FF'}/>
-                        <Price/>
+                        <Price price={price}/>
                     </View>
                 </View>
             </View>

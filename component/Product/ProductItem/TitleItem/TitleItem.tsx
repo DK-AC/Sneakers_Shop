@@ -1,11 +1,13 @@
 import React from 'react';
 import {StyleSheet, Text} from "react-native";
 
-export const TitleItem = () => {
+type PropsType = {
+    title: string
+}
+
+export const TitleItem: React.FC<PropsType> = ({title}) => {
     return (
-        <>
-            <Text style={styles.title}>Nike Air Max Plus III</Text>
-        </>
+        <><Text style={styles.title}>{title}</Text></>
     );
 };
 

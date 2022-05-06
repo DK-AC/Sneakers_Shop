@@ -1,12 +1,16 @@
 import React from 'react';
 import {StyleSheet, Text} from "react-native";
 
-export const Price = () => {
+type PropsType = {
+    price: number
+}
+
+export const Price: React.FC<PropsType> = ({price}) => {
     return (
         <>
             <Text style={styles.price}>
                 <Text style={styles.wallet}>$</Text>
-                189
+                {price}
             </Text>
         </>
     );

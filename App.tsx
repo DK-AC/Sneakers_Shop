@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         paddingHorizontal: 20,
         paddingVertical: 20,
-        backgroundColor: '#E5E5E5'
+        backgroundColor: '#E5E5E5',
     },
     wrapper: {
         flex: 1
@@ -39,8 +39,4 @@ const styles = StyleSheet.create({
     brand: {
         paddingTop: 30
     },
-    product: {
-        paddingTop: 10
-    }
-
 });
