@@ -24,7 +24,6 @@ export const Header = () => {
 
 const styles = StyleSheet.create({
     header: {
-        flex: 1,
         flexDirection: 'row',
         color: '#313B5D',
         justifyContent: 'space-between',
