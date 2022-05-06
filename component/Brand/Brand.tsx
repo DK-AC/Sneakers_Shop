@@ -31,11 +31,11 @@ export const Brand = () => {
                     />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => {
-                    console.log('asics')
+                    console.log('reebok')
                 }} activeOpacity={0.7}>
                     <Image
                         style={styles.image}
-                        source={require('./../../assets/asics.png')}
+                        source={require('./../../assets/reebok-logo.png')}
                     />
                 </TouchableOpacity>
 

@@ -54,7 +54,7 @@ const products: ProductsType = {
             image: require('./../../assets/adidas-d67565-zx_630-2.jpg'),
             rating: 4,
             price: 160,
-            logo: require('./../../assets/adidas.png'),
+            logo: require('./../../assets/reebok-logo.png')
         },
     ],
 }
