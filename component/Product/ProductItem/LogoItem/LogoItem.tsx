@@ -9,7 +9,7 @@ export const LogoItem = () => {
                 <TouchableOpacity onPress={() => console.log('adidas')} activeOpacity={0.7}>
                     <Image
                         style={styles.logo}
-                        source={require('./../../../assets/nikeProduct.png')}
+                        source={require('./../../../../assets/nikeProduct.png')}
                     />
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => {

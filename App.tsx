@@ -16,12 +16,7 @@ export default function App() {
             <View style={styles.brand}>
                 <Brand/>
             </View>
-            <View style={styles.product}>
-                <Product/>
-                <Product/>
-                <Product/>
-                <Product/>
-            </View>
+            <Product/>
             <StatusBar style="auto"/>
         </ScrollView>
     );

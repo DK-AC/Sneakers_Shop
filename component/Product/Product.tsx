@@ -1,41 +1,17 @@
-import * as React from 'react';
-import {StyleSheet, View} from "react-native";
-import {LogoItem} from "./LogoItem/LogoItem";
-import {MainImage} from "./MainImage/MainImage";
-import {TitleItem} from "./TitleItem/TitleItem";
-import {Price} from "./Price/Price";
-import {RatingItem} from "./RatingItem/RatingItem";
+import {StyleSheet, View} from 'react-native';
+import {ProductItem} from "./ProductItem/ProductItem";
 
 export const Product = () => {
     return (
-        <>
-            <View style={styles.product}>
-                <LogoItem/>
-                <MainImage/>
-                <View>
-                    <TitleItem/>
-                    <View style={styles.rating}>
-                        <RatingItem color={'#FFC833'}/>
-                        <RatingItem color={'#FFC833'}/>
-                        <RatingItem color={'#FFC833'}/>
-                        <RatingItem color={'#FFC833'}/>
-                        <RatingItem color={'#EBF0FF'}/>
-                        <Price/>
-                    </View>
-                </View>
-            </View>
-        </>
+        <View style={styles.product}>
+            <ProductItem image={require('./../../assets/mainImage.png')}/>
+            <ProductItem image={require('./../../assets/mainImage2.png')}/>
+        </View>
     );
-};
+}
 
 const styles = StyleSheet.create({
     product: {
-        backgroundColor: '#fff',
-        padding: 15,
-        marginTop: 20
-    },
-    rating: {
-        display: 'flex',
-        flexDirection: 'row',
-    },
+        paddingTop: 10
+    }
 });

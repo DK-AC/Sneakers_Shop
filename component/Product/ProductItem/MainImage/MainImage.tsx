@@ -1,16 +1,18 @@
 import React from 'react';
-import {Image, StyleSheet, TouchableOpacity, View} from "react-native";
+import {Image, ImageSourcePropType, StyleSheet, TouchableOpacity, View} from "react-native";
 
-export const MainImage = () => {
+type PropsType = {
+    image: ImageSourcePropType
+}
+
+export const MainImage: React.FC<PropsType> = ({image}) => {
     return (
         <>
             <View>
-                <TouchableOpacity onPress={() => {
-                    console.log('adidas')
-                }} activeOpacity={0.7}>
+                <TouchableOpacity onPress={() => console.log('nike')} activeOpacity={0.7}>
                     <Image
                         style={styles.image}
-                        source={require('./../../../assets/mainImage.png')}
+                        source={image}
                     />
                 </TouchableOpacity>
             </View>
