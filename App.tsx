@@ -8,7 +8,7 @@ import {Product} from "./component/Product/Product";
 
 export default function App() {
     return (
-        <ScrollView style={styles.container}>
+        <ScrollView style={styles.container} >
             <Header/>
             <View style={styles.searchBar}>
                 <SearchBar/>
