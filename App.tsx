@@ -1,5 +1,5 @@
 import {StatusBar} from 'expo-status-bar';
-import {StyleSheet, View} from 'react-native';
+import {ScrollView, StyleSheet, View} from 'react-native';
 import {Header} from "./component/Header/Header";
 import {SearchBar} from "./component/SearchBar/SearchBar";
 import {Brand} from "./component/Brand/Brand";
@@ -8,7 +8,7 @@ import {Product} from "./component/Product/Product";
 
 export default function App() {
     return (
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
             <Header/>
             <View style={styles.searchBar}>
                 <SearchBar/>
@@ -20,7 +20,7 @@ export default function App() {
                 <Product/>
             </View>
             <StatusBar style="auto"/>
-        </View>
+        </ScrollView>
     );
 }
 

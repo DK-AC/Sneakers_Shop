@@ -18,7 +18,7 @@ export const Product = () => {
                     <TouchableOpacity onPress={() => {
                         console.log('adidas')
                     }} activeOpacity={0.7}>
-                        <Ionicons name="heart-outline" size={27} color="black"/>
+                        <Ionicons name="heart-outline" size={27} color="grey"/>
                     </TouchableOpacity>
                 </View>
                 <View>
@@ -33,10 +33,42 @@ export const Product = () => {
                 </View>
                 <View style={styles.title}>
                     <Text style={styles.titleProduct}>Nike Air Max Plus III</Text>
-                </View>
-                <View>
+                    <View>
+                        <View style={styles.rating}>
+                            <TouchableOpacity onPress={() => {
+                                console.log('star1')
+                            }} activeOpacity={0.7}>
+                                <Ionicons name="star" size={24} color="#FFC833"/>
+                            </TouchableOpacity>
+                            <TouchableOpacity onPress={() => {
+                                console.log('star2')
+                            }} activeOpacity={0.7}>
+                                <Ionicons name="star" size={24} color="#FFC833"/>
+                            </TouchableOpacity>
+                            <TouchableOpacity onPress={() => {
+                                console.log('star3')
+                            }} activeOpacity={0.7}>
+                                <Ionicons name="star" size={24} color="#FFC833"/>
+                            </TouchableOpacity>
+                            <TouchableOpacity onPress={() => {
+                                console.log('star4')
+                            }} activeOpacity={0.7}>
+                                <Ionicons name="star" size={24} color="#FFC833"/>
+                            </TouchableOpacity>
 
+                            <TouchableOpacity onPress={() => {
+                                console.log('star5')
+                            }} activeOpacity={0.7}>
+                                <Ionicons name="star" size={24} color="#EBF0FF"/>
+                            </TouchableOpacity>
+                            <Text style={styles.price}>
+                                <Text style={styles.wallet}>$</Text>
+                                189
+                            </Text>
+                        </View>
+                    </View>
                 </View>
+
             </View>
         </>
     );
@@ -71,5 +103,20 @@ const styles = StyleSheet.create({
     },
     title: {
         transform: [{translateY: -60}]
+    },
+    rating: {
+        display: 'flex',
+        flexDirection: 'row',
+    },
+    price: {
+        fontSize: 23,
+        fontWeight: '700',
+        color: '#313B5D',
+        transform: [{translateX: 130}, {translateY: -10}]
+    },
+    wallet: {
+        color: '#3A63E0',
+        fontSize: 18,
+        fontWeight: '700'
     }
 });
